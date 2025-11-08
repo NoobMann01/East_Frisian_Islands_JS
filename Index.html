@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<!-- This is Head, it is the title of the web-page and appears on the tab -->
+<head>
+<title>East Frisian Island</title>
+</head>
+
+<!-- This is actual content that appears on the web-page -->
+<body>
+<header style="background-color:rgb(177, 119, 119); " >
+    
+  <h2 style="text-align:center;">The East Frisian Island </h2>  
+</header>
+<h2>The East Frisian Island </h2>
+
+<!-- Here, div is embeded with another command "flex", it is a styling tool. Here it displays its child horizontally-alligned   -->
+<div style=" display: flex;"> 
+
+    <!-- Here, div is the parent folder and displays its child as normally it would appear without any container  -->
+    <div  id="infoText">
+        <p style="text-align:left;">The East Frisian Islands (German: Ostfriesische Inseln, pronounced [ˈɔstˌfʁiːzɪʃə ˈɪnzl̩n] ⓘ; West Frisian: Eastfryske eilannen; Saterland Frisian: Aastefräiske Ailounds) are a chain of islands in the North Sea, off the coast of East Frisia in Lower Saxony, Germany. The islands extend for some 90 kilometres (56 mi) from west to east between the mouths of the Ems and Jade / Weser rivers and lie about 3.5 to 10 kilometres (2.2 to 6.2 mi) offshore. Between the islands and the mainland are extensive mudflats, known locally as Watten, which form part of the Wadden Sea. In front of the islands are Germany's territorial waters, which occupy a much larger area than the islands themselves. The islands, the surrounding mudflats and the territorial waters (The Küstenmeer vor den ostfriesischen Inseln nature reserve) form a close ecological relationship. The island group makes up about 5% of the Lower Saxon Wadden Sea National Park.</p>
+        <p>The largest island by surface area is Borkum, located at the western end of the chain; the other six inhabited islands are from west to east: Juist, Norderney with the largest town in the islands, Baltrum, Langeoog, Spiekeroog and Wangerooge. There are also four other small, uninhabited islands: Lütje Hörn east of Borkum, Memmert and Kachelotplate southwest of Juist, Minsener Oog, a dredged island southeast of Wangerooge, and Mellum at the eastern end of the island chain which, following the boundary revision by the Federal Office for Nature Conservation, no longer belongs to the East Frisian Islands, but to the mudflats of the Elbe-Weser Triangle (Watten im Elbe-Weser-Dreieck). </p>
+    <a href="https://en.wikipedia.org/wiki/East_Frisian_Islands"> East Frisian Island</a>"
+    </div>
+    
+    <!-- Image Section -->
+
+    <img src="East_Frisian_Islands.png" width="818" height="490" id="mainImg"  usemap="#East_Frisian_Islands" >
+    <map name="East_Frisian_Islands">
+
+
+<!-- Area Selection on the image -->
+    
+    <area shape="rect" coords="23,307,100,342" 
+        onmouseover="changeContent('East_Frisian_Islands_-_Borkum.png', 'Borkum')" 
+        onmouseout="changeContent('East_Frisian_Islands.png', 'default')" 
+        href="https://en.wikipedia.org/wiki/Borkum">
+    <area shape="rect" coords="150,233,271,277" 
+        onmouseover="changeContent('East_Frisian_Islands_-_Juist.png', 'Juist')" 
+        onmouseout="changeContent('East_Frisian_Islands.png', 'default')"
+        href="https://en.wikipedia.org/wiki/Juist">
+    <area shape="rect" coords="295,200,410,220" 
+        onmouseover="changeContent('East_Frisian_Islands_-_Norderney.png', 'Norderney')" 
+        onmouseout="changeContent('East_Frisian_Islands.png', 'default')"
+        href="https://en.wikipedia.org/wiki/Norderney">
+    <area shape="rect" coords="420,182,460,206" 
+        onmouseover="changeContent('East_Frisian_Islands_-_Baltrum.png', 'Baltrum')" 
+        onmouseout="changeContent('East_Frisian_Islands.png', 'default')"
+        href="https://en.wikipedia.org/wiki/Baltrum">
+    <area shape="rect" coords="470,170,570,190" 
+        onmouseover="changeContent('East_Frisian_Islands_-_Langeoog.png', 'Langeoog')" 
+        onmouseout="changeContent('East_Frisian_Islands.png', 'default')"
+        href="https://en.wikipedia.org/wiki/Langeoog">
+    <area shape="rect" coords="592,140,679,170" 
+        onmouseover="changeContent('East_Frisian_Islands_-_Spiekeroog.png', 'Spiekeroog')" 
+        onmouseout="changeContent('East_Frisian_Islands.png', 'default')"
+        href="https://en.wikipedia.org/wiki/Spiekeroog">
+    <area shape="rect" coords="696,127,800,172" 
+        onmouseover="changeContent('East_Frisian_Islands_-_Wangerooge.png', 'Wangerooge')" 
+        onmouseout="changeContent('East_Frisian_Islands.png', 'default')"
+        href="https://en.wikipedia.org/wiki/Wangerooge">
+
+    
+</map>
+</div>
+<script>
+        function changeContent(src, area){
+            document.getElementById("mainImg").src = src;
+            const textbox = document.getElementById("infoText")
+
+            if (area === 'Borkum'){
+                textbox.innerHTML= `<h3> Borkum </h3>
+                <p> Borkum is bordered to the west by the Westerems strait (which forms the border with the Netherlands), to the east by the Osterems strait, to the north by the North Sea, and to the south by the Wadden Sea. It is the largest and westernmost of the East Frisian Islands in the North Sea, due north of the Dutch province of Groningen. </p>
+                <p> The island was formed in 1863 by two previously separate islands which were still separated by a shallow water. The seam between the former eastern and western parts is called Tüskendör ("through in between"). </p>`
+            }
+            if (area === 'Juist' ){
+                textbox.innerHTML=` <h3> Juist </h3>
+                <p> Juist (German pronunciation: [ˈjyːst] ⓘ; Low German: Juist) is an island and municipality in the district of Aurich in Lower Saxony in Germany. The island is one of seven East Frisian Islands at the edge of the Lower Saxon Wadden Sea in the southern North Sea. It is located between Borkum Island (west), Memmert Island (southwest) and Norderney (east). The island is 17 km (11 mi) long and from 500 metres (1,600 ft) to 1 kilometre (0.62 mi) wide, depending on the tide levels. There are two villages on the island: the main village Juist, and Loog. The island is separated from Norderney by the Norderneyer Seegatt.</p>`
+
+            }
+            if (area === 'Norderney'){
+                textbox.innerHTML=` <h3> Norderney </h3>
+                <p> Norderney (German pronunciation: [ˌnɔʁdɐˈnaɪ] ⓘ; Low German: Nördernee) is one of the seven populated East Frisian Islands off the North Sea coast of Germany.[3][4] The island is 14 by 2.5 kilometres (8.7 by 1.6 mi), having a total area of about 26.3 square kilometres (10.2 sq mi) and is therefore Germany's ninth-largest island. Norderney's population amounts to about 5,850[5] people. In 1946 Norderney gained municipal status and belongs to the Aurich "Kreis" (county). On the northern side of the island lies a 14-kilometre (8.7 mi) long sandy beach. The neighbouring island to the east is Baltrum, which lies about 800m (half a mile) away beyond the Wichter Ee. To the west is the island of Juist, about 3 kilometres (1.9 mi) away on the other side of the Norderneyer Seegatt. </p>`
+
+
+            }
+            if (area === 'Baltrum'){
+                textbox.innerHTML=` <h3> Baltrum </h3>
+                <p>Baltrum (German pronunciation: [ˈbaltʁʊm] ⓘ; Low German: Baltrum) is a barrier island off the coast of East Frisia (German: Ostfriesland), in Germany, and is a municipality in the district of Aurich, Lower Saxony. It is located in-between the chain of the seven inhabited East Frisian Islands. Baltrum is the smallest island in this chain by area and inhabitants. It has a land area of 6.5 square kilometres, and a population in (2011) of just over 500 resident inhabitants. </p>`
+
+
+            }
+            if (area === 'Langeoog'){
+                textbox.innerHTML=` <h3> Langeoog </h3>
+                <p> Langeoog (German pronunciation: [ˈlaŋəˌʔoːk] ⓘ; Low German: Langeoog) is one of the seven inhabited East Frisian Islands at the edge of the Lower Saxon Wadden Sea in the southern North Sea, located between Baltrum Island (west), and Spiekeroog (east). It is also a municipality in the district of Wittmund in Lower Saxony, Germany. The name Langeoog means Long Island in the Low German dialect.</p>`
+
+
+            }
+            if (area === 'Spiekeroog'){
+                textbox.innerHTML=` <h3> Spiekeroog </h3>
+                <p>Spiekeroog (German pronunciation: [ˈʃpiːkɐˌʔoːk] ⓘ) is one of the East Frisian Islands, off the North Sea coast of Germany. It is situated between Langeoog to its west and Wangerooge to its east. The island belongs to the district of Wittmund, in Lower Saxony in Germany. The only village on the island is also called Spiekeroog. The island is part of the Wadden Sea World Heritage Site by the UNESCO and the Lower Saxon Wadden Sea National Park. </p>`
+
+
+            }
+            if (area === 'Wangerooge'){
+                textbox.innerHTML=` <h3> Wangerooge </h3>
+                <p> Wangerooge (German: [vaŋɐˈʔoːɡə] ⓘ; Low German: Wangeroog; Wangerooge Frisian: Wangeróoch)[3] is one of the 32 Frisian Islands in the North Sea off the northwestern coast of Germany. It is a municipality in the district of Friesland in Lower Saxony in Germany. The island is also located close to the coasts of the Netherlands and Denmark.</p>`
+
+
+            }
+            else if(area === 'default'){
+                textbox.innerHTML = `<div>
+                    <p style="text-align:left;">The East Frisian Islands (German: Ostfriesische Inseln, pronounced [ˈɔstˌfʁiːzɪʃə ˈɪnzl̩n] ⓘ; West Frisian: Eastfryske eilannen; Saterland Frisian: Aastefräiske Ailounds) are a chain of islands in the North Sea, off the coast of East Frisia in Lower Saxony, Germany. The islands extend for some 90 kilometres (56 mi) from west to east between the mouths of the Ems and Jade / Weser rivers and lie about 3.5 to 10 kilometres (2.2 to 6.2 mi) offshore. Between the islands and the mainland are extensive mudflats, known locally as Watten, which form part of the Wadden Sea. In front of the islands are Germany's territorial waters, which occupy a much larger area than the islands themselves. The islands, the surrounding mudflats and the territorial waters (The Küstenmeer vor den ostfriesischen Inseln nature reserve) form a close ecological relationship. The island group makes up about 5% of the Lower Saxon Wadden Sea National Park.</p>
+                    <p>The largest island by surface area is Borkum, located at the western end of the chain; the other six inhabited islands are from west to east: Juist, Norderney with the largest town in the islands, Baltrum, Langeoog, Spiekeroog and Wangerooge. There are also four other small, uninhabited islands: Lütje Hörn east of Borkum, Memmert and Kachelotplate southwest of Juist, Minsener Oog, a dredged island southeast of Wangerooge, and Mellum at the eastern end of the island chain which, following the boundary revision by the Federal Office for Nature Conservation, no longer belongs to the East Frisian Islands, but to the mudflats of the Elbe-Weser Triangle (Watten im Elbe-Weser-Dreieck). </p>
+                    <a href="https://en.wikipedia.org/wiki/East_Frisian_Islands"> East Frisian Island</a>"
+                    </div>`
+            }
+        }
+    </script>
+
+
+
+<footer style="background-color:rgb(138, 143, 237); width:100%">
+    <style>
+        footer p {text-align: center;}
+    
+    </style>
+  <p>Author: Chirangibi Singh</p>
+  <p>Mattriculation No.: 10076903</p>
+  <p><a href="mailto:chiranjibisingh91@gmail.com">chiranjibisingh91@gmail.com</a></p>
+  <p>copyright</p>
+</footer>
+</body>
+</html>
